@@ -16,8 +16,12 @@ We can "call" our implemented function at runtime by reading the data out of mem
 ---
 ## Installation
 
-
 This tool requires Python 3.6 or above, and while the automated scripts we generate were designed around Vivado 2019.2, other versions of Vivado should also work. Please let me know if there are any issues.
+
+First, get the tool from GitHub using:
+```bash
+git clone https://github.com/3364656/memory-compute.git
+```
 
 The Python packages we need to install are given in the __requirements.txt__ file. This can be done using any Python package manager, like __pip__. From within the memory-compute directory we would run:
 ```bash
