@@ -3,14 +3,30 @@
 This is an automated tool for FPGA development that turns Python functions into memory-compute cores, implemented in Verilog.
 
 
+
+---
 ## Memory-based Computing
+
 
 Instead of using traditional logic to implement a function, we instead pre-compute all the function's possible values, store them in FPGA memory, then access them at runtime. The memory is loaded onto the FPGA during initial configuration, and the architecture we provide allows the user to treat these memory-compute units like any other Verilog module.
 
 We can "call" our implemented function at runtime by reading the data out of memory. As our architecture parallelises memory accesses to the memory's underlying block RAMs, we can serve multiple function calls at once.
 
+
+---
+## Installation
+
+
+This tool requires Python 3.6 or above, and while the automated scripts we generate were designed around Vivado 2019.2, other versions of Vivado should also work. Please let me know if there are any issues.
+
+The Python packages we need to install are given in the __requirements.txt__ file. This can be done using any Python package manager, like __pip__. From within the memory-compute directory we would run:
+```bash
+pip3 install -r requirements.txt
+```
+
 ---
 ## Creating Your Python Function
+
 
 The Python function's output must be based solely on its inputs. Apart from that, it can be anything. 
 
@@ -70,6 +86,7 @@ Signed and unsigned numbers are presented as standard python integers.
 
 ---
 ## Examples
+
 
 Three examples are provided in the __examples__ directory. They include the __tanh__ example above, a __4-bit multiplier__, and finally an __arbitrary function__ to show how to use mixed types.
 
