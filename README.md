@@ -173,7 +173,7 @@ Configuration file, examples/configFile_arb.yaml:
 ---
 vivado-project-directory: "/path/to/vivado_project_dir"
 function:
-  name: "arb"
+  name: "fn"
   arguments:
     - name:  select
       type:  uint
@@ -189,7 +189,7 @@ function:
 
 User function in examples/function.py:
 ```python
-def arb(select, value):
+def fn(select, value):
   import numpy as np
   
   if select == 0:
