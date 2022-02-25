@@ -164,7 +164,7 @@ A Verilog testbench is provided in the __examples__ directory to show how the me
 
 ### Example of Arbitrary Inputs
 
-Using memory-compute cores means computation is now just a read to memory. We can therefore mix and match computation and look-up tables. Below is a function with a two inputs: a 2-bit selector and a 12-bit floating point variable.
+Using memory-compute cores means computation is now just a read to memory. We can therefore mix and match computation and look-up tables. Below is a function with two inputs: a 2-bit selector and a 12-bit floating point variable.
 
 This example uses an unsigned integer to select the type of function to perform, and which pre-defined constant to use. In this way, we can control the use of different function configurations at runtime, e.g., selecting different filters, data formatting, etc.
  
